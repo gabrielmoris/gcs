@@ -42,3 +42,11 @@ export async function getStaticProps({ params }: any) {
 }
 
 export default PostDetails
+
+export async function getStaticPaths() {
+  const posts = await getPosts()
+  return {
+    paths: posts.map(({ node: { slug } }: any) => ({ params: { slug } })),
+    fallback: false,
+  }
+}
