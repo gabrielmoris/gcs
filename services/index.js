@@ -81,3 +81,4 @@ export const getSimilarPosts = async (categories, slug) => {
 
   return result.posts
 }
+
