@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Postcard, Categories, PostWidget } from '../components'
-import { getPost } from '../services'
+import { getPosts } from '../services'
 
 const Home: NextPage = ({posts}:any) => {
   return (
@@ -28,7 +28,7 @@ const Home: NextPage = ({posts}:any) => {
 }
 
 export async function getStaticProps() {
-  const posts = (await getPost()) || []
+  const posts = (await getPosts()) || []
 
   return{
     props: {posts}
