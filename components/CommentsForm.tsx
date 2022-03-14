@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CommentsForm = () => {
+const CommentsForm = ({slug}:any) => {
   return (
     <div>CommentsForm</div>
   )

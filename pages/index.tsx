@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Postcard, Categories, PostWidget } from '../components'
 import { getPosts } from '../services'
 
-const Home: NextPage = ({posts}:any) => {
+const Home: NextPage = ({ posts }: any) => {
   return (
     <div className="container mx-auto mb-8 px-10">
       <Head>
@@ -18,7 +18,7 @@ const Home: NextPage = ({posts}:any) => {
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative top-8 lg:sticky">
-            <PostWidget />
+            <PostWidget categories={''} slug={''} />
             <Categories />
           </div>
         </div>
@@ -30,8 +30,8 @@ const Home: NextPage = ({posts}:any) => {
 export async function getStaticProps() {
   const posts = (await getPosts()) || []
 
-  return{
-    props: {posts}
+  return {
+    props: { posts },
   }
 }
 
