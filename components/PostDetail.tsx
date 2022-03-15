@@ -66,9 +66,9 @@ const PostDetail = ({ post }: any) => {
                   | null
                   | undefined,
                 i: React.Key | null | undefined
-              ) => (
-                <React.Fragment key={i}>{item}</React.Fragment>
-              )
+              ) => {
+                return <React.Fragment key={i}>{item}</React.Fragment>
+              }
             )}
           </p>
         )
@@ -85,9 +85,9 @@ const PostDetail = ({ post }: any) => {
                   | null
                   | undefined,
                 i: React.Key | null | undefined
-              ) => (
-                <React.Fragment key={i}>{item}</React.Fragment>
-              )
+              ) => {
+                return <React.Fragment key={i}>{item}</React.Fragment>
+              }
             )}
           </h4>
         )
