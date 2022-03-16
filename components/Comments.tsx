@@ -19,7 +19,9 @@ const Comments = ({ slug }:any) => {
       {comments.length > 0 && (
         <div className="mb-8 rounded-lg bg-white p-8 pb-12 shadow-lg">
           <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
-            {comments.length} Comments
+            {comments.length === 1 && (comments.length+ " comment")}
+            {comments.length > 1 && (comments.length+ " comments")}
+            {/* {comments.length} comments */}
           </h3>
           {comments.map((comment:any, index:any) => (
             <div key={index} className="mb-4 border-b border-gray-100 pb-4">
