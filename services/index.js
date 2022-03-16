@@ -224,7 +224,7 @@ export const submitComment = async (obj) => {
 export const getComments = async (slug) => {
   const query = gql`
     query GetComments($slug: String!) {
-      comments(where: { post: { slug: $slug } }) {
+      coments(where: { post: { slug: $slug } }) {
         name
         createdAt
         comment

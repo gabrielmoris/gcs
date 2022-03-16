@@ -20,13 +20,13 @@ export default async function comments(
   })
 
   const query = gql`
-    mutation SendComment(
+    mutation CreateComent(
       $name: String!
       $email: String!
       $comment: String!
       $slug: String!
     ) {
-      sendComment(
+      createComent(
         data: {
           name: $name
           email: $email
