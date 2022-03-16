@@ -9,7 +9,6 @@ const Comments = ({ slug }:any) => {
 
   useEffect(() => {
     getComments(slug).then((result) => {
-      console.log("the result",result)
       setComments(result)
     })
   }, [])
